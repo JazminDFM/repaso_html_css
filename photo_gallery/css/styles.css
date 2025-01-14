@@ -32,3 +32,10 @@ body{
     margin: 0 auto;
     gap: 16px;
 }
+
+.gallery::after{
+    content: "";
+    width: 350px;
+}
+
+/* El pseudo-elemento ::after crea un elemento que es el último hijo del elemento seleccionado. Puedes usarlo para añadir un elemento vacío después de la última imagen. Si le das el mismo ancho que las imágenes, empujará la última imagen hacia la izquierda cuando la galería esté en un diseño de dos columnas. En este momento, está centrado porque has configurado justify-content: center en el contenedor flex. */
