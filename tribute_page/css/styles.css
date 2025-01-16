@@ -3,6 +3,7 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     text-align: center;
+    background-color: rgb(241, 253, 255);
     color: #333;
     margin: 0;
 }
@@ -16,6 +17,9 @@ body {
 h1{
     font-size: 4rem;
     margin-bottom: 0;
+}
+p{
+    font-size:1.2rem;
 }
 #img-div {
     border-radius: 5px;
@@ -38,6 +42,9 @@ h1{
 #headline {
     margin: 50px 0;
     text-align: center;
+}
+#tribute-info{
+    font-size: 1.2rem;
 }
 ul {
     max-width: 550px;
