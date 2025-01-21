@@ -1,0 +1,132 @@
+html{
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    color: #0a0a23;
+}
+/* El selector span[class~="sr-only"] seleccionará cualquier elemento <span> cuya clase incluya sr-only. */
+/* En este caso clip-path seria la propiedad más actual pero usamos las dos por si alguien lo abre desde una navegador antiguo, para que funcione bien vamos */
+span[class~="sr-only"]{
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important; /* Recorta el elemento a un área de 1x1 píxel, ocultándolo visualmente */
+    clip-path: inset(50%) !important; /* Define una forma de recorte más moderna, desplazando un 50% desde los bordes */
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important; /*Usamos esta propiedad para evitar que el contenido se desborde*/
+    white-space: nowrap !important;
+    position:absolute !important;
+    padding:0 !important;
+    margin:-1px !important;
+}
+h1{
+    max-width: 37.25rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem;
+}
+h1 .flex{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+}
+h1 .flex span:first-of-type{ /*Se lo aplica a AcmeWidgetCorp porque es el primero aunque visualmente para nosotros no*/
+    font-size: 0.7em;
+}
+h1 .flex span:last-of-type{
+    font-size: 1.2em; /*Y este se lo aplica al Balance Sheet ^^*/
+}
+section{
+    max-width: 40rem;
+    margin: 0 auto;
+    border: 2px solid #d0d0d5;
+}
+#years{
+    display: flex;
+    position: sticky;
+    justify-content: flex-end;
+    top: 0;
+    color:#fff;
+    background-color:#0a0a23;
+    margin: 0 -2px;
+    padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0;
+    z-index: 999;
+}
+#years span[class]{ /*Seleccionara a los pan con cualquier clase dentro del id div*/
+    font-weight: bold;
+    width: 4.5rem;
+    text-align: right;
+}
+
+.table-wrap {
+    padding: 0 0.75rem 1.5rem 0.75rem;
+  }
+/* : El pseudo-selector :not() excluye los elementos que coinciden con el selector especificado. : En este caso, span:not(.sr-only) aplica estilos a todos los elementos <span> que NO tengan la clase sr-only. : Esto asegura que los estilos para span[class~="sr-only"] no sean sobrescritos, mientras se aplica font-weight: normal al resto. */
+/*La explicacion de arriba ya no sirve, porque puse important a todas las propiedades (no es muy buena practica pero bueno)*/
+table {
+    border-collapse: collapse;
+    border: 0;
+    width: 100%;
+    position: relative;
+    margin-top: 3rem;
+}
+table caption {
+    color: #356eaf;
+    font-size: 1.3em;
+    font-weight: normal;
+    position:absolute;
+    top:-2.25rem;
+    left:0.5rem;
+  }
+tbody td{
+    width:100vw;
+    min-width:4rem;
+    max-width:4rem;
+}
+tbody th{
+    width:calc(100% - 12rem);
+}
+tr[class="total"]{
+    font-weight: bold;
+    border-bottom: 4px double #0a0a23;
+}
+tr[class="total"] th{
+    text-align: left;
+    padding: 0.5rem 0 0.25rem 0.5rem;
+}
+/* La diferencia clave es que tr[class="total"] selecciona solo los tr con la clase exacta "total", mientras que tr.total selecciona tr que contienen "total" en su lista de clases. */
+tr.total td{ 
+    text-align: right;
+    padding: 0 0.25rem;
+}
+tr.total td:nth-of-type(3){
+    padding: 0.5rem;
+}
+tr.total:hover{
+    background-color: #99c9ff;
+}
+td[class="current"]{
+    font-style: italic;
+}
+tr[class="data"]{
+    background-image: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);
+}
+
+tr.data th{
+    text-align: left;
+    padding:0.3rem 0 0 0.5rem;
+}
+tr.data th .description{
+    display: block;
+    font-style: italic;
+    font-weight: normal;
+    padding: 1rem 0 0.75rem;
+    margin-right: -13.5rem;
+}
+tr.data td{
+    text-align: right;
+    vertical-align: top;
+    padding: 0.3rem 0.25rem 0;
+}
+tr.data td:last-of-type{
+    padding: 0.5rem;
+}
