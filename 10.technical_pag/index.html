@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <header><h1>C Documentation</h1></header>
+        <ul>
+            <li><a href="#introduction" class="nav-link">Introduction</a></li>
+            <li><a href="#what_you_should_already_know" class="nav-link">What you should already know</a></li>
+            <li><a href="#c_and_c#" class="nav-link">C and C#</a></li>
+            <li><a href="#hello_world" class="nav-link">Hello World</a></li>
+            <li><a href="#variables" class="nav-link">Variables</a></li>
+            <li><a href="#declaring_variables" class="nav-link">Declaring Variables</a></li>
+            <li><a href="#reference" class="nav-link">Reference</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="introduction">
+            <header><h1>Introduction</h1></header>
+            <article>
+                    <p>C is a high-performance, procedural programming language that has been widely used for decades. It is a general-purpose language that allows direct manipulation of memory and system resources, making it highly suitable for systems programming and embedded applications.</p>
+                <p>C provides a minimalistic set of features, with a core language that includes operators, control structures, and data types. It is known for its efficiency and flexibility, allowing developers to write programs that can be executed quickly and with low overhead. Additionally, C can be extended with libraries that provide additional functionality.</p>
+                <p>For example:</p>
+                <ul>
+                    <li>Standard Library: The C Standard Library includes a set of functions and macros that allow for tasks such as input/output operations, memory management, and string manipulation.</li>
+                    <li>Systems Programming: C is widely used for writing operating systems, device drivers, and other software that interacts closely with hardware.</li>
+                    <li>Embedded Programming: Due to its low-level capabilities, C is commonly used in programming embedded systems where hardware control and resource efficiency are critical.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="what_you_should_already_know">
+            <header><h1>What you should already know</h1></header>
+            <article>
+                <p>This guide assumes you have the following basic background:</p>
+                <ul>
+                    <li>A general understanding of computer programming concepts.</li>
+                    <li>Familiarity with basic data structures and algorithms.</li>
+                    <li>Some experience with using a text editor or an Integrated Development Environment (IDE) for coding.</li>
+                    <li>Basic knowledge of how compilers work and how to compile and run programs.</li>
+                </ul>
+                <p>If you are new to programming, we recommend starting with simpler languages or tutorials on foundational programming concepts before diving into C.</p>
+            </article>
+        </section>
+        <section class="main-section" id="c_and_c#">
+            <header><h1>C and C#</h1></header>
+            <article>
+                <p>C and C# share some similarities but are fundamentally different in various ways. While both are used for general-purpose programming, their design philosophies and use cases vary significantly. C is a low-level procedural language, while C# is a high-level object-oriented language developed by Microsoft as part of the .NET framework.</p>
+                <p>C follows a simpler, procedural model, focusing on the manipulation of memory and system-level operations. It does not have built-in support for object-oriented programming, and its syntax is more direct, giving the programmer more control over system resources. In C, everything is based on functions, and you manage memory manually through pointers and direct memory allocation, which can lead to high performance but also greater complexity and a higher risk of errors like memory leaks.</p>
+                <p>In contrast, C# is a modern, high-level language that emphasizes simplicity and productivity. It follows an object-oriented paradigm, where everything is part of a class. C# features automatic memory management via garbage collection, meaning developers do not need to manually manage memory, reducing the likelihood of errors. It also supports modern programming concepts such as LINQ (Language Integrated Query), async/await for asynchronous programming, and a rich set of libraries within the .NET ecosystem, making it ideal for building web, desktop, and mobile applications.</p>
+                <p>While C is often used in systems programming, embedded systems, and operating systems, C# is commonly used for application development on Windows, as well as web services, cloud applications, and games (via Unity).</p>
+            </article>
+        </section>
+        <section class="main-section" id="hello_world">
+            <header><h1>Hello World</h1></header>
+            <article>
+                <p>To get started with writing C, open a text editor and write your first "Hello, world" program:</p>
+                <pre><code>#include &lt;stdio.h&gt;
+                int main() {
+                    printf("Hello, World!\n");
+                    return 0;
+                }
+                </code></pre>
+                <p>Save the file with a <code>.c</code> extension (for example, <code>hello.c</code>). Then, compile and run the program using a C compiler (like <code>gcc</code> or <code>clang</code>). For example, on the command line, you can type:</p>
+                <pre><code>
+                    gcc hello.c -o hello
+                    ./hello
+                </code></pre>
+                <p>This will display <code>Hello, World!</code> in your terminal.</p>
+            </article>
+        </section>
+        <section class="main-section" id="variables">
+            <header><h1>Variables</h1></header>
+            <article>
+                <p>In C, variables are used to store data that can be manipulated within a program. The names of variables (called identifiers) must follow certain rules.</p>
+                <p>A C identifier must start with a letter (A-Z or a-z) or an underscore (_), and subsequent characters can include letters, digits (0-9), and underscores. C is case-sensitive, meaning that <code>myVar</code> and <code>myvar</code> would be considered different identifiers.</p>
+                <p>Examples of valid identifiers:</p>
+                <ul>
+                    <li><code>number_hits</code></li>
+                    <li><code>temp99</code></li>
+                    <li><code>_name</code></li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="declaring_variables">
+            <header><h1>Declaring Variables</h1></header>
+            <article>
+                <p>You declare a variable in C by specifying the type followed by the variable name. For example:</p>
+                <pre>
+                    <code>
+                        int x = 42;  // Declares an integer variable and initializes it
+                        float y = 13.5;  // Declares a floating-point variable
+                        char letter = 'A';  // Declares a character variable
+                    </code>
+                </pre>
+                <p>In C, the variable's type (such as <code>int</code>, <code>float</code>, <code>char</code>, etc.) must be specified when declaring the variable. Unlike JavaScript, C does not allow dynamically typed variables — you must declare the type explicitly.</p>
+            </article>
+        </section>
+        <section class="main-section" id="reference">
+            <header><h1>Reference</h1></header>
+            <article>
+                <ul>
+                    <li>All the documentation in this page is taken from <a href="https://devdocs.io/c/">DevDocs</a></li>
+                </ul>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
