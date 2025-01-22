@@ -1,4 +1,4 @@
- 🌐 Tribute Page  
+# 🌐 Tribute Page 
 Este proyecto fue desarrollado como parte del curso de **[Responsive Web Design](https://www.freecodecamp.org/learn/2022/responsive-web-design/)** de FreeCodeCamp. 🚀  
 
 ## 🛠️ Tecnologías utilizadas  
