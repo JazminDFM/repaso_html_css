@@ -62,17 +62,15 @@
             <header><h1>Hello World</h1></header>
             <article>
                 <p>To get started with writing C, open a text editor and write your first "Hello, world" program:</p>
-                <pre><code>#include &lt;stdio.h&gt;
-                int main() {
-                    printf("Hello, World!\n");
-                    return 0;
-                }
-                </code></pre>
+                <pre><code class="block">#include &lt;stdio.h&gt;
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}</code></pre>
                 <p>Save the file with a <code>.c</code> extension (for example, <code>hello.c</code>). Then, compile and run the program using a C compiler (like <code>gcc</code> or <code>clang</code>). For example, on the command line, you can type:</p>
-                <pre><code>
-                    gcc hello.c -o hello
+                <code class="block">gcc hello.c -o hello
                     ./hello
-                </code></pre>
+                </code>
                 <p>This will display <code>Hello, World!</code> in your terminal.</p>
             </article>
         </section>
@@ -93,13 +91,9 @@
             <header><h1>Declaring Variables</h1></header>
             <article>
                 <p>You declare a variable in C by specifying the type followed by the variable name. For example:</p>
-                <pre>
-                    <code>
-                        int x = 42;  // Declares an integer variable and initializes it
-                        float y = 13.5;  // Declares a floating-point variable
-                        char letter = 'A';  // Declares a character variable
-                    </code>
-                </pre>
+                    <pre><code class="block pre">int x = 42;  // Declares an integer variable and initializes it
+float y = 13.5;  // Declares a floating-point variable
+char letter = 'A';  // Declares a character variable</code></pre>
                 <p>In C, the variable's type (such as <code>int</code>, <code>float</code>, <code>char</code>, etc.) must be specified when declaring the variable. Unlike JavaScript, C does not allow dynamically typed variables — you must declare the type explicitly.</p>
             </article>
         </section>
@@ -107,7 +101,7 @@
             <header><h1>Reference</h1></header>
             <article>
                 <ul>
-                    <li>All the documentation in this page is taken from <a href="https://devdocs.io/c/">DevDocs</a></li>
+                    <li>All the documentation in this page is taken from <a href="https://devdocs.io/c/" target="_blank">DevDocs</a></li>
                 </ul>
             </article>
         </section>
