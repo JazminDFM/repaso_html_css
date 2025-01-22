@@ -3,9 +3,10 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     text-align: center;
-    background-color: rgb(241, 253, 255);
+    background-color: rgba(241, 253, 255);
     color: #333;
     margin: 0;
+    overflow-x: hidden;
 }
 #main {
     margin: 30px 8px;
